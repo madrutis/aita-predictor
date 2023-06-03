@@ -1,0 +1,3 @@
+aita_scraper info
+client id: hn4ACib40dq2_537QDanyg
+client secret: zXHU8m22n4mehB0FhtZb3swJUiJvoA
