@@ -14,4 +14,3 @@ The goal of this project is to be able to predict the outcome of an [r/aita](htt
 - We should be able to predict a post at this point, given some tweaks to the algorithm
 ### UI
 - Not sure if I want to make a UI to submit posts yet, but it could be useful and a good project to do with django
->>>>>>> 36d312bc2c2482ea5906ef143d9a11704a90d359
