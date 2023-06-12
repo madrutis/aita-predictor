@@ -32,9 +32,13 @@ class Scraper:
         sw.start()
         reddit = self.get_reddit()
         aita = reddit.subreddit("AmItheAsshole")
+        j = 0
         for reddit_post in aita.hot(limit=num_post):
+            sw1 = Stopwatch(3)
+            sw1.start()
             if reddit_post.stickied:
                 continue
+            print('post #' + str(j) + ': ', end='')
             comments = []
             if num_comments >= 32:
                 reddit_post.comments.replace_more(limit=num_comments)
@@ -49,8 +53,12 @@ class Scraper:
                     i += 1
             new_post = Post(reddit_post.title, reddit_post.selftext, comments)
             self.posts.append(new_post)
+            sw1.stop()
+            j += 1
+            print(str(sw1))
         sw.stop()
-        print(sw.duration)
+        print('total time: ', str(sw))
+
     def print_posts(self):
         for post in self.posts:
             post.print_post()
@@ -85,8 +93,9 @@ class Post:
         return max({key: self.info[key] for key in ratings}, key=self.info.get)
 
     def print_rates(self):
+        ratings = ['NTA', 'YTA', 'NAH', 'ESH']
         pp = pprint.PrettyPrinter(indent=2, width=100)
-        for rate, count in self.ratings.items():
+        for rate, count in {key: self.info[key] for key in ratings}.items():
             pp.pprint(rate + ': ' + str(count))
 
     def print_post(self):
@@ -104,7 +113,7 @@ class Post:
 
 
 def main():
-    scraper = Scraper(3, 31)
+    scraper = Scraper(1000, 25)
     # scraper.print_posts()
     # scraper.print_ratings()
     scraper.to_csv()
