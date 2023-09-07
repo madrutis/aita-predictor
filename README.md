@@ -1,6 +1,6 @@
 # aita-predictor
 ## Goal
-The goal of this project is to be able to predict the outcome of an [r/aita](https://www.reddit.com/r/AmItheAsshole/) post as one of three choices with accuracy:
+The goal of this project is to be able to predict the outcome of an [r/aita](https://www.reddit.com/r/AmItheAsshole/) post as one of four labels with accuracy:
 - NTA `Not the Asshole`
 - YTA `You're the Asshole`
 - NAH `No Assholes Here`
