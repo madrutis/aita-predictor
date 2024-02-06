@@ -12,6 +12,7 @@ The goal of this project is to be able to predict the outcome of an [r/aita](htt
 - Once the desired posts are compiled a **________** machine learning algorithm will be trained
 ### Prediction / Test
 - Predict posts using the bag of words, and a single layer perceptron
+## Possible extensions of the project
 ### UI
 - Not sure if I want to make a UI to submit posts yet, but it could be useful and a good project to do with django
 ### Reddit Post Bot
