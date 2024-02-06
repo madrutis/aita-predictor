@@ -7,11 +7,11 @@ The goal of this project is to be able to predict the outcome of an [r/aita](htt
 - ESH `Everyone Sucks Here`
 ## Components
 ### Web Scraper
-- The Web Scraper will gather recent posts given a number and store them in a database **Not sure what format yet**
+- The Web Scraper will gather recent posts given a number and store them in a database
 ### Training
 - Once the desired posts are compiled a **________** machine learning algorithm will be trained
 ### Prediction / Test
-- We should be able to predict a post at this point, given some tweaks to the algorithm
+- Predict posts using the bag of words, and a single layer perceptron
 ### UI
 - Not sure if I want to make a UI to submit posts yet, but it could be useful and a good project to do with django
 ### Reddit Post Bot
